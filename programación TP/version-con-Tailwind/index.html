@@ -36,7 +36,52 @@
             </nav>
         </div>
     </header>
-    <main></main>
+    <main>
+        <!-- Checkbox para controlar el menu (no se muestra, esta oculto) -->
+<input type="checkbox" id="sidebar-toggle" class="peer hidden" />
+
+<!-- botón de menu para desplegar sidebar -->
+<div class="p-4">
+  <label for="sidebar-toggle" class="bg-[#00b894] text-gray-800 font-bold px-4 py-2 rounded cursor-pointer inline-block shadow peer-checked:hidden">
+    ≡ MENU
+  </label>
+</div>
+
+<!-- menu container -->
+<div class="fixed top-[135px] left-0 h-[calc(100vh-135px)] w-64 bg-[#00b894] text-gray-800 flex flex-col transition-transform duration-300 -translate-x-full peer-checked:translate-x-0 z-40 shadow-xl">
+  
+  <!-- barra para cerrar el menu -->
+  <label for="sidebar-toggle" class="bg-[#7fcdbb] py-3 text-center font-bold tracking-wider cursor-pointer border-b border-[#00b894]/20 select-none">
+    MENU ✕
+  </label>
+
+  <!-- lista de opciones -->
+  <nav class="flex-1 px-4 py-6 space-y-4">
+    
+    <a href="#" class="flex items-center gap-3 group">
+      <span class="w-6 h-6 rounded-full bg-slate-200 block shrink-0"></span>
+      <span class="flex-1 bg-[#7fcdbb] py-1.5 px-3 rounded text-sm font-semibold tracking-wide uppercase text-gray-800 group-hover:bg-teal-200 transition-colors">
+        PRODUCTOS
+      </span>
+    </a>
+
+    <a href="#" class="flex items-center gap-3 group">
+      <span class="w-6 h-6 rounded-full bg-slate-200 block shrink-0"></span>
+      <span class="flex-1 bg-[#7fcdbb] py-1.5 px-3 rounded text-sm font-semibold tracking-wide uppercase text-gray-800 group-hover:bg-teal-200 transition-colors">
+        PAGOS
+      </span>
+    </a>
+
+    <a href="#" class="flex items-center gap-3 group">
+      <span class="w-6 h-6 rounded-full bg-slate-200 block shrink-0"></span>
+      <span class="flex-1 bg-[#7fcdbb] py-1.5 px-3 rounded text-sm font-semibold tracking-wide uppercase text-gray-800 group-hover:bg-teal-200 transition-colors">
+        ENVIOS
+      </span>
+    </a>
+
+  </nav>
+</div>
+    </main>
     <footer></footer>
 </body>
 </html>
