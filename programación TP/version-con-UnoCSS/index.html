@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VirtualPC</title>
+
+  <!-- Importacion de UnoCSS y sus presets -->
+  <script type="module">
+    import initUnocssRuntime from 'https://esm.sh/@unocss/runtime'
+    import presetWind3 from 'https://esm.sh/@unocss/preset-wind3'
+    import presetAttributify from 'https://esm.sh/@unocss/preset-attributify'
+
+    // Inicializamos el motor con las utilidades de Tailwind y el modo Attributify
+    initUnocssRuntime({
+      defaults: {
+        presets: [
+          presetWind3(),
+          presetAttributify()
+        ]
+      }
+    })
+  </script>
+</head>
+<body m="0" p="0" bg="gray-900" overflow-x="hidden" font="sans">
+    <header
+    text="teal-500"
+    >
+    <div 
+    hidden sm:block 
+    bg="purple-600"
+    p="y-1 md:y-2 x-2"
+    >
+        <p m="0" uppercase text="white center">horarios: lun a vie desde 9:00 hs a 17:00 hs</p>
+    </div>
+        <div
+        bg="black"
+        h="16 sm:24"
+        box-border
+        p="y-2 x-4 sm:y-0"
+        gap="2"
+        flex
+        items="center"
+        justify="between sm:around"
+        uppercase
+        >
+            <!-- Oculto en mobile -->
+            <div
+                hidden md:block
+            >
+                <p><a href="/">que buscas?</p></a>
+            </div>
+        
+            <div>
+                <img 
+                src="/tp-programacion/programación TP/version-con-UnoCSS/img/logo pagina.png" 
+                alt="logo pagina"
+                h="14 sm:20"
+                w="auto"
+                >
+            </div>
+            <div>
+                <p>
+                    <a 
+                    href="#"
+                    no-underline
+                    text="teal-500 hover:white xs md:base">
+                    inicio de Sesion
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div
+            bg="teal-500"
+            text="black"
+            >
+            <nav options>
+                <ul
+                flex
+                items="center"
+                justify="center"
+                gap="8"
+                p="2"
+                m="0"
+                uppercase
+                text="xs md:base"
+                font="semibold"
+                list-none
+                >
+                    <li text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Productos</a>
+                    </li>
+                    <li text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Promociones</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Monitores</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Teclados</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Audio/Video</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Locales</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <section 
+        relative
+        w="full"
+        h="[23vh]""
+        md:h="screen"
+        overflow="hidden">
+        <img src="img/Hero.jpg" 
+        alt="Hero bg" 
+        w="full"
+        h="full"
+        object="cover"
+        object-position="center">
+        </section>
+
+    </header>
+</body>
+</html>
