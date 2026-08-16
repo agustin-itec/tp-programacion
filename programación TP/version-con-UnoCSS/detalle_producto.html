@@ -3,11 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VirtualPC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
+    <!-- Importacion de UnoCSS y sus presets -->
+  <script type="module">
+    import initUnocssRuntime from 'https://esm.sh/@unocss/runtime'
+    import presetWind3 from 'https://esm.sh/@unocss/preset-wind3'
+    import presetAttributify from 'https://esm.sh/@unocss/preset-attributify'
+    import presetIcons from 'https://esm.sh/@unocss/preset-icons/browser'
+
+    // Inicializamos el motor con las utilidades de Tailwind y el modo Attributify
+    initUnocssRuntime({
+      defaults: {
+        presets: [
+          presetWind3(),
+          presetAttributify(),
+          presetIcons({
+          cdn: 'https://esm.sh/'
+        })
+        ]
+      }
+    })
+  </script>
 </head>
-<body>
-    <nav></nav>
-    <main></main>
+<body m="0" p="0" bg="gray-900" overflow-x="hidden" font="sans">
+    <header
+    text="teal-500"
+    >
+    <div 
+    hidden sm:block 
+    bg="purple-600"
+    p="y-1 md:y-2 x-2"
+    >
+        <p m="0" uppercase text="white center">horarios: lun a vie desde 9:00 hs a 17:00 hs</p>
+    </div>
+        <div
+        bg="black"
+        h="16 sm:24"
+        box-border
+        p="y-2 x-4 sm:y-0"
+        gap="2"
+        flex
+        items="center"
+        justify="between sm:around"
+        uppercase
+        >
+            <!-- Oculto en mobile -->
+            <div
+                hidden md:block
+            >
+                <p><a href="/">que buscas?</p></a>
+            </div>
+        
+            <div>
+                <img 
+                src="/tp-programacion/programación TP/version-con-UnoCSS/img/logo pagina.png" 
+                alt="logo pagina"
+                h="14 sm:20"
+                w="auto"
+                >
+            </div>
+            <div>
+                <p>
+                    <a 
+                    href="#"
+                    no-underline
+                    text="teal-500 hover:white xs md:base">
+                    inicio de Sesion
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div
+            bg="teal-500"
+            text="black"
+            >
+            <nav options>
+                <ul
+                flex
+                items="center"
+                justify="center"
+                gap="8"
+                p="2"
+                m="0"
+                uppercase
+                text="xs md:base"
+                font="semibold"
+                list-none
+                >
+                    <li text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Productos</a>
+                    </li>
+                    <li text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Promociones</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Monitores</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Teclados</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Audio/Video</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/"no-underline text="black hover:white">Locales</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main bg="slate-900" py="8" px="4" flex="grow" font="sans">
+    <!-- Volver al inicio -->
+    <div max-w="5xl" mx="auto" mb="6">
+        <a href="index.html" text="teal-400 sm font-semibold" hover:text="teal-300" flex="inline items-center gap-2">
+            <span class="i-lucide-arrow-left text-lg"></span> 
+            Volver a productos
+        </a>
+    </div>
+
+    <!-- container principal -->
+    <section max-w="5xl" mx="auto" bg="slate-800" rounded="2xl" shadow="xl" border="~ slate-700" overflow="hidden" p="6 md:10" grid="~ cols-1 md:cols-2 gap-8 items-center">
+        
+        <!-- Imagen producto -->
+        <div w="full" h="64 sm:80 md:96" bg="slate-950" rounded="xl" flex="~ items-center justify-center" overflow="hidden" p="4" border="~ slate-700/50">
+            <img src="img/play5.jpg" alt="PlayStation 5" w="full" h="full" object="contain" hover:scale="105" transition="duration-300">
+        </div>
+
+        <div flex="~ col justify-between" h="full">
+            <div>
+                <div>
+                    <span text="xs teal-400" font="bold" uppercase="" bg="teal-500/10" px="3" py="1" rounded="full" border="~ teal-500/20" inline-block="">
+                        Nuevo
+                    </span>
+                </div>
+                
+                <h1 text="2xl sm:3xl md:4xl teal-400" font="extrabold" mt="3" mb="2">
+                    PlayStation 5
+                </h1>
+
+                <p text="gray-300 sm sm:base" mb="6" leading="relaxed">
+                    Consola de videojuegos con rendimiento de última generación. Experimentá cargas ultra rápidas gracias a su SSD de alta velocidad, inmersión profunda con respuesta háptica y sonido 3D impresionante.
+                </p>
+
+                <!-- Especificaciones con presets de iconos de unocss -->
+                <ul text="sm gray-300" space-y="2" mb="6" border="t b slate-700" py="4">
+                    <li flex="~ items-center gap-2">
+                        <span class="i-lucide-hard-drive text-teal-400"></span> 
+                        Almacenamiento: 825 GB SSD
+                    </li>
+                    <li flex="~ items-center gap-2">
+                        <span class="i-lucide-tv text-teal-400"></span> 
+                        Resolución: Hasta 4K a 120 FPS
+                    </li>
+                    <li flex="~ items-center gap-2">
+                        <span class="i-lucide-gamepad-2 text-teal-400"></span> 
+                        Incluye: 1 Control DualSense
+                    </li>
+                </ul>
+
+                <div mb="6">
+                    <span text="gray-400 xs" block="" uppercase="">Precio contado</span>
+                    <span text="3xl sm:4xl white" font="extrabold">$1.250.000</span>
+                </div>
+            </div>
+            <div flex="~ col sm:row gap-3" mt="4">
+                <button w="full" bg="teal-500" hover:bg="teal-400" text="black" font="bold" py="3" px="6" rounded="lg" transition="duration-200" uppercase="" cursor="pointer" flex="~ items-center justify-center gap-2">
+                    <span class="i-lucide-shopping-cart text-lg"></span>
+                    Añadir al carrito
+                </button>
+                <button w="full sm:auto" bg="transparent" border="~ teal-500" text="teal-400" hover:bg="teal-500/10" font="bold" py="3" px="6" rounded="lg" transition="duration-200" uppercase="" cursor="pointer">
+                    Comprar
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
     <footer></footer>
 </body>
 </html>
