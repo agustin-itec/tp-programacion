@@ -196,5 +196,80 @@
             </div>
         </section>
     </main>
+  <!--FOOTER-->
+    <footer border="t-4 [#00b894]" bg="black" text="white">
+      <div mx="auto" w="full" max-w="6xl" px="6" py="6 md:8">
+
+        <!-- ===== BLOQUE A + B · grilla de 12 columnas ===== -->
+        <div grid="~ cols-1 md:cols-12" gap="6 md:8">
+
+          <!-- BLOQUE A · marca -->
+          <div col="md:span-4">
+            <a href="index.html" inline-block no-underline text="2xl white" font="extrabold" tracking="tight">
+              Virtual PC<span text="[#00b894]">.</span>
+            </a>
+          </div>
+
+          <!-- BLOQUE B · GRILLA ANIDADA: 1 columna en mobile, 2 en escritorio -->
+          <div col="md:span-8" grid="~ cols-1 sm:cols-2" gap="6">
+
+            <!-- el cartel se abre en la misma pagina, sin JS: lo maneja <details> -->
+            <div>
+              <h2 m="0" text="xs [#00b894]" font="bold" uppercase tracking="[0.15em]">Legales</h2>
+              <details class="group" mt="4">
+                <summary
+                  class="list-none [&::-webkit-details-marker]:hidden"
+                  flex
+                  items="center"
+                  gap="2"
+                  cursor="pointer"
+                  text="sm [#BBBFBF] hover:white"
+                  transition="colors duration-200">
+                  <span class="group-open:rotate-90" inline-block transition="transform duration-200">&rsaquo;</span>
+                  Terminos y condiciones
+                </summary>
+
+                <div mt="3" rounded border="~ [#878787]/40" bg="[#111111]" p="4" text="xs [#BBBFBF]" leading="relaxed">
+                  <h3 m="0" font="bold" text="white">1. Compra</h3>
+                  <p mt="2" mb="0">
+                    Al comprar y abonar mediante depósito o transferencia, acepta informar el pago
+                    mediante el sitio web antes de la fecha de vencimiento de la reserva para que no
+                    sea dada de baja.
+                  </p>
+                  <p mt="2" mb="0">
+                    Los datos proporcionados para la facturación deben coincidir con los del titular
+                    de la transferencia.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div>
+              <h2 m="0" text="xs [#00b894]" font="bold" uppercase tracking="[0.15em]">Contacto</h2>
+              <ul mt="4" mb="0" p="0" list-none space-y="3" text="sm [#BBBFBF]">
+                <li>0800 444 0555</li>
+                <li>virtualPC@gmail.com</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- texto legal -->
+        <p mt="6" mb="0" border="t [#878787]/40" pt="4" text="xs [#878787]" leading="relaxed">
+          Las fotos son ilustrativas. Los precios y las cuotas publicadas son validos
+          unicamente para la compra online y estan sujetos a verificacion de stock.
+          Las especificaciones tecnicas pueden modificarse sin previo aviso.
+          Virtual PC S.A. &mdash; Constitucion 1250, Rio Cuarto, Cordoba, Argentina. CUIT 30-12345678-9.
+        </p>
+
+        <!-- copyright -->
+        <div mt="4" flex="~ col md:row" gap="3" border="t [#878787]/40" pt="4" text="xs [#BBBFBF]" items="md:center" justify="md:between">
+          <p m="0">&copy; 2026 Virtual PC. Todos los derechos reservados.</p>
+          <p m="0">Trabajo practico &mdash; Reto 5 &mdash; Equipo 1</p>
+        </div>
+
+      </div>
+    </footer>
 </body>
 </html>
