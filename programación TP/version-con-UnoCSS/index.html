@@ -46,9 +46,15 @@
         >
             <!-- Oculto en mobile -->
             <div
-                hidden md:block
-            >
-                <p><a href="/">que buscas?</p></a>
+                hidden md:block>
+                <p>
+                    <a
+                    href="#"
+                    no-underline
+                    text="teal-500 hover:white xs md:base">
+                    que buscas?
+                    </a>
+                </p>
             </div>
         
             <div>
@@ -88,30 +94,32 @@
                 list-none
                 >
                     <li text="xs sm:sm md:base">
-                        <a href="/"no-underline text="black hover:white">Productos</a>
+                        <a href="/" no-underline text="black hover:white">Productos</a>
                     </li>
                     <li text="xs sm:sm md:base">
-                        <a href="/"no-underline text="black hover:white">Promociones</a>
+                        <a href="/" no-underline text="black hover:white">Promociones</a>
                     </li>
                     <li hidden sm:block text="xs sm:sm md:base">
-                        <a href="/"no-underline text="black hover:white">Monitores</a>
+                        <a href="/" no-underline text="black hover:white">Monitores</a>
                     </li>
                     <li hidden sm:block text="xs sm:sm md:base">
-                        <a href="/"no-underline text="black hover:white">Teclados</a>
+                        <a href="/" no-underline text="black hover:white">Teclados</a>
                     </li>
                     <li hidden sm:block text="xs sm:sm md:base">
-                        <a href="/"no-underline text="black hover:white">Audio/Video</a>
+                        <a href="/" no-underline text="black hover:white">Audio/Video</a>
                     </li>
                     <li hidden sm:block text="xs sm:sm md:base">
-                        <a href="/"no-underline text="black hover:white">Locales</a>
+                        <a href="/" no-underline text="black hover:white">Locales</a>
                     </li>
                 </ul>
             </nav>
         </div>
+    </header>
+    <main bg="slate-900" min-h="screen" pb="12">
         <section 
         relative
         w="full"
-        h="[23vh]""
+        h="[23vh]"
         md:h="screen"
         overflow="hidden">
         <img src="img/Hero.jpg" 
@@ -121,7 +129,11 @@
         object="cover"
         object-position="center">
         </section>
+    
+        <section bg="teal-500" text="center" p="6 md:8" mb="12" shadow="md">
+            <h1 text="xl md:2xl black" font="bold">¡No te lo pierdas, productos unicos!</h1> 
+        </section> 
 
-    </header>
+    </main>
 </body>
 </html>
