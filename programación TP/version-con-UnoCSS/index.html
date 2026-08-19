@@ -116,6 +116,7 @@
         </div>
     </header>
     <main bg="slate-900" min-h="screen" pb="12">
+        <!-- HERO -->
         <section 
         relative
         w="full"
@@ -129,11 +130,71 @@
         object="cover"
         object-position="center">
         </section>
-    
+        <!-- Banner de encabezado -->
         <section bg="teal-500" text="center" p="6 md:8" mb="12" shadow="md">
             <h1 text="xl md:2xl black" font="bold">¡No te lo pierdas, productos unicos!</h1> 
         </section> 
+        <!-- Sección de Productos Centrada -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+            <!-- Tarjeta del Producto 1-->
+            <div class="bg-slate-800 text-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full p-6 text-center border border-slate-700 hover:scale-105 transition duration-300">
+            
+                <!-- Contenedor de la Imagen Centrada -->
+                <div class="img_content w-full h-48 mb-4 flex items-center justify-center overflow-hidden rounded-lg bg-slate-950">
+                    <img src="img/Computadora.jpg" alt="Computadora Gamer" class="w-full h-full object-contain"> 
+                </div>
 
+                <!-- Información del Producto -->
+                <h1 class="text-xl font-bold mb-2 text-teal-400">Computadora Gamer</h1>
+                <p class="text-gray-300 text-sm mb-6">Monitor Gamer 22" X-Micro Full HD 75Hz HDMI VGA 5ms LED Plano</p> 
+            
+                <!-- Botón -->
+                <button class="main_button w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition duration-200 uppercase">
+                    Lo quiero
+                </button>
+            </div>
+
+            <!-- Tarjeta del Producto 2-->
+            <div class="bg-slate-800 text-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full p-6 text-center border border-slate-700 hover:scale-105 transition duration-300">
+            
+                <!-- Contenedor de la Imagen Centrada --> 
+                <div class="img_content w-full h-48 mb-4 flex items-center justify-center overflow-hidden rounded-lg bg-slate-950">
+                    <img src="img/tablet.jpg" alt="Tablet" class="w-screen h-full object-contain">
+                </div>
+
+                <!-- Información del Producto -->
+                <h1 class="text-xl font-bold mb-2 text-teal-400"> Tablet </h1>
+                <p class="text-gray-300 text-sm mb-6">Tablet 10" con pantalla HD y batería de larga duración</p> 
+
+                <!-- Botón -->
+                <button class="main_button w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition duration-200 uppercase">
+                    Lo quiero
+                </button>
+            </div>
+
+            <!-- Tarjeta del Producto 3-->
+            <div class="bg-slate-800 text-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full p-6 text-center border border-slate-700 hover:scale-105 transition duration-300">
+            
+                <!-- Contenedor de la Imagen Centrada -->
+                <div class="img_content w-full h-48 mb-4 flex items-center justify-center overflow-hidden rounded-lg bg-slate-950">
+                    <img src="img/play5.jpg" alt="PlayStation 5" class="w-full h-full object-contain"> 
+                </div>
+
+                <!-- Información del Producto -->
+                <h1 class="text-xl font-bold mb-2 text-teal-400">PlayStation 5</h1>
+                <p class="text-gray-300 text-sm mb-6">Consola de videojuegos con rendimiento de última generación</p> 
+            
+                <!-- Botón -->
+                <a href="/programación TP/version-con-Tailwind/producto.html">
+                    <button class="main_button w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition duration-200 uppercase">
+                        Lo quiero
+                    </button>
+                </a>
+            
+            </div>
+        </section>
     </main>
 </body>
 </html>
