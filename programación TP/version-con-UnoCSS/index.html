@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VirtualPC</title>
+
+  <!-- Importacion de UnoCSS y sus presets -->
+  <script type="module">
+    import initUnocssRuntime from 'https://esm.sh/@unocss/runtime'
+    import presetWind3 from 'https://esm.sh/@unocss/preset-wind3'
+    import presetAttributify from 'https://esm.sh/@unocss/preset-attributify'
+
+    // Inicializamos el motor con las utilidades de Tailwind y el modo Attributify
+    initUnocssRuntime({
+      defaults: {
+        presets: [
+          presetWind3(),
+          presetAttributify()
+        ]
+      }
+    })
+  </script>
+</head>
+<body m="0" p="0" bg="gray-900" overflow-x="hidden" font="sans">
+    <header
+    text="teal-500"
+    >
+    <div 
+    hidden sm:block 
+    bg="purple-600"
+    p="y-1 md:y-2 x-2"
+    >
+        <p m="0" uppercase text="white center">horarios: lun a vie desde 9:00 hs a 17:00 hs</p>
+    </div>
+        <div
+        bg="black"
+        h="16 sm:24"
+        box-border
+        p="y-2 x-4 sm:y-0"
+        gap="2"
+        flex
+        items="center"
+        justify="between sm:around"
+        uppercase
+        >
+            <!-- Oculto en mobile -->
+            <div
+                hidden md:block>
+                <p>
+                    <a
+                    href="#"
+                    no-underline
+                    text="teal-500 hover:white xs md:base">
+                    que buscas?
+                    </a>
+                </p>
+            </div>
+        
+            <div>
+                <img 
+                src="/tp-programacion/programación TP/version-con-UnoCSS/img/logo pagina.png" 
+                alt="logo pagina"
+                h="14 sm:20"
+                w="auto"
+                >
+            </div>
+            <div>
+                <p>
+                    <a 
+                    href="#"
+                    no-underline
+                    text="teal-500 hover:white xs md:base">
+                    inicio de Sesion
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div
+            bg="teal-500"
+            text="black"
+            >
+            <nav options>
+                <ul
+                flex
+                items="center"
+                justify="center"
+                gap="8"
+                p="2"
+                m="0"
+                uppercase
+                text="xs md:base"
+                font="semibold"
+                list-none
+                >
+                    <li text="xs sm:sm md:base">
+                        <a href="/" no-underline text="black hover:white">Productos</a>
+                    </li>
+                    <li text="xs sm:sm md:base">
+                        <a href="/" no-underline text="black hover:white">Promociones</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/" no-underline text="black hover:white">Monitores</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/" no-underline text="black hover:white">Teclados</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/" no-underline text="black hover:white">Audio/Video</a>
+                    </li>
+                    <li hidden sm:block text="xs sm:sm md:base">
+                        <a href="/" no-underline text="black hover:white">Locales</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main bg="slate-900" min-h="screen" pb="12">
+        <!-- HERO -->
+        <section 
+        relative
+        w="full"
+        h="[23vh]"
+        md:h="screen"
+        overflow="hidden">
+        <img src="img/Hero.jpg" 
+        alt="Hero bg" 
+        w="full"
+        h="full"
+        object="cover"
+        object-position="center">
+        </section>
+        <!-- Banner de encabezado -->
+        <section bg="teal-500" text="center" p="6 md:8" mb="12" shadow="md">
+            <h1 text="xl md:2xl black" font="bold">¡No te lo pierdas, productos unicos!</h1> 
+        </section> 
+        <!-- Sección de Productos Centrada -->
+        <section max-w="7xl" mx="auto" px="4 sm:6 lg:8">
+            <div grid="~ cols-1 sm:cols-2 lg:cols-3 gap-6 lg:gap-8">
+        
+            <!-- Tarjeta del Producto 1-->
+            <div bg="slate-800" text="white center" rounded="2xl" shadow="xl" overflow="hidden" max-w="sm" w="full" p="6" border="~ slate-700" hover:scale="105" transition="duration-300">
+            
+                <!-- Contenedor de la Imagen Centrada -->
+                <div class="img_content" w="full" h="48" mb="4" flex="~ items-center justify-center" overflow="hidden" rounded="lg" bg="slate-950">
+                    <img src="img/Computadora.jpg" alt="Computadora Gamer" w="full" h="full" object="contain"> 
+                </div>
+
+                <!-- Información del Producto -->
+                <h1 text="xl teal-400" font="bold" mb="2">Computadora Gamer</h1>
+                <p text="gray-300 sm" mb="6">Monitor Gamer 22" X-Micro Full HD 75Hz HDMI VGA 5ms LED Plano</p> 
+            
+                <!-- Botón -->
+                <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2" px="4" rounded="lg" transition="duration-200" uppercase cursor="pointer">
+                    Lo quiero
+                </button>
+            </div>
+
+            <!-- Tarjeta del Producto 2-->
+            <div bg="slate-800" text="white center" rounded="2xl" shadow="xl" overflow="hidden" max-w="sm" w="full" p="6" border="~ slate-700" hover:scale="105" transition="duration-300">
+            
+                <!-- Contenedor de la Imagen Centrada --> 
+                <div class="img_content" w="full" h="48" mb="4" flex="~ items-center justify-center" overflow="hidden" rounded="lg" bg="slate-950">
+                    <img src="img/tablet.jpg" alt="Tablet" w="full" h="full" object="contain">
+                </div>
+
+                <!-- Información del Producto -->
+                <h1 text="xl teal-400" font="bold" mb="2"> Tablet </h1>
+                <p text="gray-300 sm" mb="6">Tablet 10" con pantalla HD y batería de larga duración</p> 
+
+                <!-- Botón -->
+                <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2" px="4" rounded="lg" transition="duration-200" uppercase cursor="pointer">
+                    Lo quiero
+                </button>
+            </div>
+
+            <!-- Tarjeta del Producto 3-->
+            <div bg="slate-800" text="white center" rounded="2xl" shadow="xl" overflow="hidden" max-w="sm" w="full" p="6" border="~ slate-700" hover:scale="105" transition="duration-300">
+            
+                <!-- Contenedor de la Imagen Centrada -->
+                <div class="img_content" w="full" h="48" mb="4" flex="~ items-center justify-center" overflow="hidden" rounded="lg" bg="slate-950">
+                    <img src="img/play5.jpg" alt="PlayStation 5" w="full" h="full" object="contain"> 
+                </div>
+
+                <!-- Información del Producto -->
+                <h1 text="xl teal-400" font="bold" mb="2">PlayStation 5</h1>
+                <p text="gray-300 sm" mb="6">Consola de videojuegos con rendimiento de última generación</p> 
+            
+                <!-- Botón -->
+                <a href="/programación TP/version-con-UnoCSS/detalle_producto.html">
+                    <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2" px="4" rounded="lg" transition="duration-200" uppercase cursor="pointer">
+                        Lo quiero
+                    </button>
+                </a>
+            
+            </div>
+        </section>
+    </main>
+  <!--FOOTER-->
+    <footer border="t-4 [#00b894]" bg="black" text="white">
+      <div mx="auto" w="full" max-w="6xl" px="6" py="6 md:8">
+
+        <!-- ===== BLOQUE A + B · grilla de 12 columnas ===== -->
+        <div grid="~ cols-1 md:cols-12" gap="6 md:8">
+
+          <!-- BLOQUE A · marca -->
+          <div col="md:span-4">
+            <a href="index.html" inline-block no-underline text="2xl white" font="extrabold" tracking="tight">
+              Virtual PC<span text="[#00b894]">.</span>
+            </a>
+          </div>
+
+          <!-- BLOQUE B · GRILLA ANIDADA: 1 columna en mobile, 2 en escritorio -->
+          <div col="md:span-8" grid="~ cols-1 sm:cols-2" gap="6">
+
+            <!-- el cartel se abre en la misma pagina, sin JS: lo maneja <details> -->
+            <div>
+              <h2 m="0" text="xs [#00b894]" font="bold" uppercase tracking="[0.15em]">Legales</h2>
+              <details class="group" mt="4">
+                <summary
+                  class="list-none [&::-webkit-details-marker]:hidden"
+                  flex
+                  items="center"
+                  gap="2"
+                  cursor="pointer"
+                  text="sm [#BBBFBF] hover:white"
+                  transition="colors duration-200">
+                  <span class="group-open:rotate-90" inline-block transition="transform duration-200">&rsaquo;</span>
+                  Terminos y condiciones
+                </summary>
+
+                <div mt="3" rounded border="~ [#878787]/40" bg="[#111111]" p="4" text="xs [#BBBFBF]" leading="relaxed">
+                  <h3 m="0" font="bold" text="white">1. Compra</h3>
+                  <p mt="2" mb="0">
+                    Al comprar y abonar mediante depósito o transferencia, acepta informar el pago
+                    mediante el sitio web antes de la fecha de vencimiento de la reserva para que no
+                    sea dada de baja.
+                  </p>
+                  <p mt="2" mb="0">
+                    Los datos proporcionados para la facturación deben coincidir con los del titular
+                    de la transferencia.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div>
+              <h2 m="0" text="xs [#00b894]" font="bold" uppercase tracking="[0.15em]">Contacto</h2>
+              <ul mt="4" mb="0" p="0" list-none space-y="3" text="sm [#BBBFBF]">
+                <li>0800 444 0555</li>
+                <li>virtualPC@gmail.com</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- texto legal -->
+        <p mt="6" mb="0" border="t [#878787]/40" pt="4" text="xs [#878787]" leading="relaxed">
+          Las fotos son ilustrativas. Los precios y las cuotas publicadas son validos
+          unicamente para la compra online y estan sujetos a verificacion de stock.
+          Las especificaciones tecnicas pueden modificarse sin previo aviso.
+          Virtual PC S.A. &mdash; Constitucion 1250, Rio Cuarto, Cordoba, Argentina. CUIT 30-12345678-9.
+        </p>
+
+        <!-- copyright -->
+        <div mt="4" flex="~ col md:row" gap="3" border="t [#878787]/40" pt="4" text="xs [#BBBFBF]" items="md:center" justify="md:between">
+          <p m="0">&copy; 2026 Virtual PC. Todos los derechos reservados.</p>
+          <p m="0">Trabajo practico &mdash; Reto 5 &mdash; Equipo 1</p>
+        </div>
+
+      </div>
+    </footer>
+</body>
+</html>

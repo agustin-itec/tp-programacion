@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. Script de Tailwind CSS via CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+</head>
+<body>
+    <div class="hidden sm:block bg-purple-600 text-center text-white py-1 px-2 md:py-2">
+        <p class="text-xs sm:text-sm md:text-base">HORARIOS: LUN A VIE DESDE 9:00 HS A 17:00 HS</p>
+    </div>
+    <!-- Empieza la navbar -->
+    <header> 
+        <div class="bg-black w-full py-3 px-4  flex gap-2 text-teal-500 items-center uppercase justify-between sm:justify-around sm:py-0 sm:h-24">
+            <article class="header-option hidden sm:block">
+                <p class="hover:text-white"><a href="/">¿Que buscas?</a></p>
+            </article>
+            
+            <article class="header-logo ">
+                <a href="index.html" 
+                class="h-10 w-auto flex items-center justify-center">
+                <img 
+                src="img/logo pagina.png" 
+                alt="Logo de la Pagina de venta de componentes para PC" 
+                class="h-14 sm:h-20 w-auto object-contain">
+            </a>
+            </article>
+            
+            <article class="login">
+                <p class="text-xs sm:text-sm hover:text-white"><a href="/">Inicio de sesion</a></p>
+            </article>
+        </div>
+        <div class="bg-teal-500 text-black">
+            <nav class="options">
+                <ul class="flex items-center justify-center  gap-8 p-2 uppercase text-lg font-semibold">
+                    <li class="text-xs hover:text-white sm:text-sm md:text-base"><a href="producto.html">Productos</a></li> 
+                    <li class="text-xs sm:text-sm md:text-base hover:text-white"><a href="/">Promociones</a></li>
+                    <li class="hidden sm:block sm:text-sm md:text-base hover:text-white"><a href="/">Monitores</a></li>
+                    <li class="hidden sm:block sm:text-sm md:text-base hover:text-white"><a href="/">Teclados</a></li>
+                    <li class="hidden sm:block sm:text-sm md:text-base hover:text-white"><a href="">Audio/Video</a></li>
+                    <li class="hidden sm:block sm:text-sm md:text-base hover:text-white"><a href="/">Locales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- h-[23vh] es relativo, es un numero a medida para ajustar el hero en Mobile -->
+        <section class="relative w-full h-[23vh] md:h-screen overflow-hidden">
+        <img src="img/Hero.jpg" 
+        alt="Hero bg" 
+        class="w-full h-full object-contain md:object-cover object-center">
+        </section>
+    </header>
+    
+<main class="bg-slate-900 min-h-screen pb-12">
+    <!-- Banner de encabezado -->
+    <section class="bg-teal-500 text-center p-6 md:p-8 mb-12 shadow-md">
+        <h1 class="text-xl md:text2xl font-bold text-black">¡No te lo pierdas, productos unicos!</h1> 
+    </section> 
+
+    <!-- Sección de Productos Centrada -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Tarjeta del Producto 1-->
+        <div class="bg-slate-800 text-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full p-6 text-center border border-slate-700 hover:scale-105 transition duration-300">
+            
+            <!-- Contenedor de la Imagen Centrada -->
+            <div class="img_content w-full h-48 mb-4 flex items-center justify-center overflow-hidden rounded-lg bg-slate-950">
+                <img src="img/Computadora.jpg" alt="Computadora Gamer" class="w-full h-full object-contain"> 
+            </div>
+
+            <!-- Información del Producto -->
+            <h1 class="text-xl font-bold mb-2 text-teal-400">Computadora Gamer</h1>
+            <p class="text-gray-300 text-sm mb-6">Monitor Gamer 22" X-Micro Full HD 75Hz HDMI VGA 5ms LED Plano</p> 
+            
+            <!-- Botón -->
+            <button class="main_button w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition duration-200 uppercase">
+                Lo quiero
+            </button>
+        </div>
+
+                
+        <!-- Tarjeta del Producto 2-->
+        <div class="bg-slate-800 text-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full p-6 text-center border border-slate-700 hover:scale-105 transition duration-300">
+            
+            <!-- Contenedor de la Imagen Centrada --> 
+            <div class="img_content w-full h-48 mb-4 flex items-center justify-center overflow-hidden rounded-lg bg-slate-950">
+                <img src="img/tablet.jpg" alt="Tablet" class="w-screen h-full object-contain">
+            </div>
+
+            <!-- Información del Producto -->
+            <h1 class="text-xl font-bold mb-2 text-teal-400"> Tablet </h1>
+            <p class="text-gray-300 text-sm mb-6">Tablet 10" con pantalla HD y batería de larga duración</p> 
+
+            <!-- Botón -->
+            <button class="main_button w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition duration-200 uppercase">
+                Lo quiero
+            </button>
+        </div>
+
+        
+        <!-- Tarjeta del Producto 3-->
+        <div class="bg-slate-800 text-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full p-6 text-center border border-slate-700 hover:scale-105 transition duration-300">
+            
+            <!-- Contenedor de la Imagen Centrada -->
+            <div class="img_content w-full h-48 mb-4 flex items-center justify-center overflow-hidden rounded-lg bg-slate-950">
+                <img src="img/play5.jpg" alt="PlayStation 5" class="w-full h-full object-contain"> 
+            </div>
+
+            <!-- Información del Producto -->
+            <h1 class="text-xl font-bold mb-2 text-teal-400">PlayStation 5</h1>
+            <p class="text-gray-300 text-sm mb-6">Consola de videojuegos con rendimiento de última generación</p> 
+            
+            <!-- Botón -->
+            <a href="/programación TP/version-con-Tailwind/producto.html">
+                <button class="main_button w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition duration-200 uppercase">
+                    Lo quiero
+                </button>
+            </a>
+            
+        </div>
+    </section>
+</main>
+<footer class="border-t-4 border-[#00b894] bg-black text-white">
+  <div class="mx-auto w-full max-w-6xl px-6 py-6 md:py-8">
+
+    <!-- ===== BLOQUE A + B · grilla de 12 columnas ===== -->
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8">
+
+      <!-- BLOQUE A · marca -->
+      <div class="md:col-span-4">
+        <a href="index.html" class="inline-block text-2xl font-extrabold tracking-tight">
+          Virtual PC<span class="text-[#00b894]">.</span>
+        </a>
+      </div>
+
+      <!-- BLOQUE B · GRILLA ANIDADA: 1 columna en mobile, 2 en escritorio -->
+      <div class="grid grid-cols-1 gap-6 md:col-span-8 sm:grid-cols-2">
+
+        <!-- el cartel se abre en la misma pagina, sin JS: lo maneja <details> -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Legales</h2>
+          <details class="group mt-4">
+            <summary class="flex cursor-pointer list-none items-center gap-2 text-sm text-[#BBBFBF] transition-colors duration-200 hover:text-white [&::-webkit-details-marker]:hidden">
+              <span class="transition-transform duration-200 group-open:rotate-90">&rsaquo;</span>
+              Terminos y condiciones
+            </summary>
+
+            <div class="mt-3 rounded border border-[#878787]/40 bg-[#111111] p-4 text-xs leading-relaxed text-[#BBBFBF]">
+              <h3 class="font-bold text-white">1. Compra</h3>
+              <p class="mt-2">
+                Al comprar y abonar mediante depósito o transferencia, acepta informar el pago
+                mediante el sitio web antes de la fecha de vencimiento de la reserva para que no
+                sea dada de baja.
+              </p>
+              <p class="mt-2">
+                Los datos proporcionados para la facturación deben coincidir con los del titular
+                de la transferencia.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Contacto</h2>
+          <ul class="mt-4 space-y-3 text-sm text-[#BBBFBF]">
+            <li>0800 444 0555</li>
+            <li>virtualPC@gmail.com</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- texto legal -->
+    <p class="mt-6 border-t border-[#878787]/40 pt-4 text-xs leading-relaxed text-[#878787]">
+      Las fotos son ilustrativas. Los precios y las cuotas publicadas son validos
+      unicamente para la compra online y estan sujetos a verificacion de stock.
+      Las especificaciones tecnicas pueden modificarse sin previo aviso.
+      Virtual PC S.A. &mdash; Constitucion 1250, Rio Cuarto, Cordoba, Argentina. CUIT 30-12345678-9.
+    </p>
+    <!--  copyright  -->
+    <div class="mt-4 flex flex-col gap-3 border-t border-[#878787]/40 pt-4 text-xs text-[#BBBFBF] md:flex-row md:items-center md:justify-between">
+      <p>&copy; 2026 Virtual PC. Todos los derechos reservados.</p>
+      <p>Trabajo practico &mdash; Reto 5 &mdash; Equipo 1</p>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
