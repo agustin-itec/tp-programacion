@@ -10,13 +10,17 @@
     import initUnocssRuntime from 'https://esm.sh/@unocss/runtime'
     import presetWind3 from 'https://esm.sh/@unocss/preset-wind3'
     import presetAttributify from 'https://esm.sh/@unocss/preset-attributify'
+    import presetIcons from 'https://esm.sh/@unocss/preset-icons/browser'
 
     // Inicializamos el motor con las utilidades de Tailwind y el modo Attributify
     initUnocssRuntime({
       defaults: {
         presets: [
           presetWind3(),
-          presetAttributify()
+          presetAttributify(),
+          presetIcons({
+          cdn: 'https://esm.sh/'
+        })
         ]
       }
     })
@@ -136,10 +140,10 @@
         </section> 
         <!-- Sección de Productos Centrada -->
         <section max-w="7xl" mx="auto" px="4 sm:6 lg:8">
-            <div grid="~ cols-1 sm:cols-2 lg:cols-3 gap-6 lg:gap-8">
+            <div grid="~ cols-1 sm:cols-2 lg:cols-3" gap="6 lg:gap-8" justify="items-center">
         
             <!-- Tarjeta del Producto 1-->
-            <div bg="slate-800" text="white center" rounded="2xl" shadow="xl" overflow="hidden" max-w="sm" w="full" p="6" border="~ slate-700" hover:scale="105" transition="duration-300">
+            <div bg="slate-800" text="white center" rounded="3xl" shadow="xl" overflow="hidden" max-w="xs" w="full" p="6" border="~ slate-700" hover:scale="102" transition="duration-300" flex="~ col justify-between">
             
                 <!-- Contenedor de la Imagen Centrada -->
                 <div class="img_content" w="full" h="48" mb="4" flex="~ items-center justify-center" overflow="hidden" rounded="lg" bg="slate-950">
@@ -151,13 +155,13 @@
                 <p text="gray-300 sm" mb="6">Monitor Gamer 22" X-Micro Full HD 75Hz HDMI VGA 5ms LED Plano</p> 
             
                 <!-- Botón -->
-                <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2" px="4" rounded="lg" transition="duration-200" uppercase cursor="pointer">
+                <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2.5" px="4" rounded="xl" transition="duration-200" uppercase cursor="pointer">
                     Lo quiero
                 </button>
             </div>
 
             <!-- Tarjeta del Producto 2-->
-            <div bg="slate-800" text="white center" rounded="2xl" shadow="xl" overflow="hidden" max-w="sm" w="full" p="6" border="~ slate-700" hover:scale="105" transition="duration-300">
+            <div bg="slate-800" text="white center" rounded="3xl" shadow="xl" overflow="hidden" max-w="xs" w="full" p="6" border="~ slate-700" hover:scale="102" transition="duration-300" flex="~ col justify-between">
             
                 <!-- Contenedor de la Imagen Centrada --> 
                 <div class="img_content" w="full" h="48" mb="4" flex="~ items-center justify-center" overflow="hidden" rounded="lg" bg="slate-950">
@@ -169,13 +173,13 @@
                 <p text="gray-300 sm" mb="6">Tablet 10" con pantalla HD y batería de larga duración</p> 
 
                 <!-- Botón -->
-                <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2" px="4" rounded="lg" transition="duration-200" uppercase cursor="pointer">
+                <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2.5" px="4" rounded="xl" transition="duration-200" uppercase cursor="pointer">
                     Lo quiero
                 </button>
             </div>
 
             <!-- Tarjeta del Producto 3-->
-            <div bg="slate-800" text="white center" rounded="2xl" shadow="xl" overflow="hidden" max-w="sm" w="full" p="6" border="~ slate-700" hover:scale="105" transition="duration-300">
+            <div bg="slate-800" text="white center" rounded="3xl" shadow="xl" overflow="hidden" max-w="xs" w="full" p="6" border="~ slate-700" hover:scale="102" transition="duration-300" flex="~ col justify-between">
             
                 <!-- Contenedor de la Imagen Centrada -->
                 <div class="img_content" w="full" h="48" mb="4" flex="~ items-center justify-center" overflow="hidden" rounded="lg" bg="slate-950">
@@ -187,8 +191,8 @@
                 <p text="gray-300 sm" mb="6">Consola de videojuegos con rendimiento de última generación</p> 
             
                 <!-- Botón -->
-                <a href="/programación TP/version-con-UnoCSS/detalle_producto.html">
-                    <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2" px="4" rounded="lg" transition="duration-200" uppercase cursor="pointer">
+                <a href="detalle_producto.html" w="full" block no-underline>
+                    <button class="main_button" w="full" bg="teal-500 hover:teal-400" text="black" font="bold" py="2.5" px="4" rounded="xl" transition="duration-200" uppercase cursor="pointer">
                         Lo quiero
                     </button>
                 </a>
