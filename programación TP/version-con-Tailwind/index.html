@@ -124,134 +124,70 @@
     </section>
 </main>
 <footer class="border-t-4 border-[#00b894] bg-black text-white">
-<div class="mx-auto w-full max-w-6xl px-6 py-12 md:py-16">
+  <div class="mx-auto w-full max-w-6xl px-6 py-6 md:py-8">
 
     <!-- ===== BLOQUE A + B · grilla de 12 columnas ===== -->
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8">
 
-    <!-- BLOQUE A · marca, newsletter y redes -->
-    <div class="md:col-span-4">
+      <!-- BLOQUE A · marca -->
+      <div class="md:col-span-4">
         <a href="index.html" class="inline-block text-2xl font-extrabold tracking-tight">
-        Nexo<span class="text-[#00b894]">.</span>
+          Virtual PC<span class="text-[#00b894]">.</span>
         </a>
+      </div>
 
-        <p class="mt-4 text-sm text-[#BBBFBF]">
-        Suscribite para conocer nuestras promociones
-        </p>
+      <!-- BLOQUE B · GRILLA ANIDADA: 1 columna en mobile, 2 en escritorio -->
+      <div class="grid grid-cols-1 gap-6 md:col-span-8 sm:grid-cols-2">
 
-        <form class="mt-4 flex flex-col gap-3 sm:flex-row" onsubmit="event.preventDefault()">
-        <label for="mail-footer" class="sr-only">Correo electronico</label>
-        <input
-            id="mail-footer" type="email" name="email" required placeholder="Ingresar correo"
-            class="w-full flex-1 rounded-full border border-[#878787]/40 bg-white px-5 py-3 text-sm text-black transition-colors duration-200 placeholder:text-[#878787] focus:border-[#00b894]">
-        <button
-            type="submit"
-            class="rounded-full bg-[#00b894] px-6 py-3 text-sm font-bold text-black transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg active:translate-y-0">
-            SUSCRIBIR
-        </button>
-        </form>
-
-        <!-- Redes -->
-        <ul class="mt-6 flex gap-3">
-        <li>
-            <a href="#" aria-label="WhatsApp"
-            class="grid h-9 w-9 place-items-center rounded-full border border-[#878787]/40 text-[#BBBFBF] transition duration-200 hover:-translate-y-0.5 hover:border-[#00b894] hover:bg-[#00b894] hover:text-black">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.9 8.9 0 0 1-4-1L3 21l2-4.5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/>
-            </svg>
-            </a>
-        </li>
-        <li>
-            <a href="#" aria-label="Instagram"
-            class="grid h-9 w-9 place-items-center rounded-full border border-[#878787]/40 text-[#BBBFBF] transition duration-200 hover:-translate-y-0.5 hover:border-[#00b894] hover:bg-[#00b894] hover:text-black">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/>
-            </svg>
-            </a>
-        </li>
-        <li>
-            <a href="#" aria-label="YouTube"
-            class="grid h-9 w-9 place-items-center rounded-full border border-[#878787]/40 text-[#BBBFBF] transition duration-200 hover:-translate-y-0.5 hover:border-[#00b894] hover:bg-[#00b894] hover:text-black">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/>
-            </svg>
-            </a>
-        </li>
-        <li>
-            <a href="mailto:hola@nexo.com" aria-label="Correo"
-            class="grid h-9 w-9 place-items-center rounded-full border border-[#878787]/40 text-[#BBBFBF] transition duration-200 hover:-translate-y-0.5 hover:border-[#00b894] hover:bg-[#00b894] hover:text-black">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/>
-            </svg>
-            </a>
-        </li>
-        </ul>
-    </div>
-
-    <!-- BLOQUE B · GRILLA ANIDADA: 2 columnas en mobile, 4 en escritorio -->
-    <div class="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-4">
-
-        <nav aria-label="Nosotros">
-        <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Nosotros</h2>
-        <ul class="mt-4 space-y-3 text-sm">
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Sobre Nexo</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Trabaja con nosotros</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Terminos y condiciones</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Politica de privacidad</a></li>
-        </ul>
-        </nav>
-
-        <!-- OJO: estos links deben coincidir con el menu del header -->
-        <nav aria-label="Comprar">
-        <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Comprar</h2>
-        <ul class="mt-4 space-y-3 text-sm">
-            <li><a href="index.html" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Promociones</a></li>
-            <li><a href="detalle_producto.html" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Monitores</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Teclados</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Audio/Video</a></li>
-        </ul>
-        </nav>
-
-        <nav aria-label="Ayuda">
-        <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Ayuda</h2>
-        <ul class="mt-4 space-y-3 text-sm">
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Centro de ayuda</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Preguntas frecuentes</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Envios y entregas</a></li>
-            <li><a href="#" class="relative text-[#BBBFBF] transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">Cambios y devoluciones</a></li>
-        </ul>
-        </nav>
-
+        <!-- el cartel se abre en la misma pagina, sin JS: lo maneja <details> -->
         <div>
-        <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Contacto</h2>
-        <ul class="mt-4 space-y-3 text-sm text-[#BBBFBF]">
-            <li>0800 444 0555</li>
-            <li><a href="mailto:hola@nexo.com" class="relative transition-colors duration-200 hover:text-white after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100">hola@nexo.com</a></li>
-            <li>Lunes a viernes, 9 a 18 h</li>
-        </ul>
-        <a href="#"
-            class="mt-5 inline-block rounded-full border-2 border-[#00b894] px-4 py-2 text-xs font-bold uppercase tracking-wide text-[#00b894] transition duration-200 hover:-translate-y-0.5 hover:bg-[#00b894] hover:text-black">
-            Boton de arrepentimiento
-        </a>
+          <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Legales</h2>
+          <details class="group mt-4">
+            <summary class="flex cursor-pointer list-none items-center gap-2 text-sm text-[#BBBFBF] transition-colors duration-200 hover:text-white [&::-webkit-details-marker]:hidden">
+              <span class="transition-transform duration-200 group-open:rotate-90">&rsaquo;</span>
+              Terminos y condiciones
+            </summary>
+
+            <div class="mt-3 rounded border border-[#878787]/40 bg-[#111111] p-4 text-xs leading-relaxed text-[#BBBFBF]">
+              <h3 class="font-bold text-white">1. Compra</h3>
+              <p class="mt-2">
+                Al comprar y abonar mediante depósito o transferencia, acepta informar el pago
+                mediante el sitio web antes de la fecha de vencimiento de la reserva para que no
+                sea dada de baja.
+              </p>
+              <p class="mt-2">
+                Los datos proporcionados para la facturación deben coincidir con los del titular
+                de la transferencia.
+              </p>
+            </div>
+          </details>
         </div>
 
-    </div>
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-[0.15em] text-[#00b894]">Contacto</h2>
+          <ul class="mt-4 space-y-3 text-sm text-[#BBBFBF]">
+            <li>0800 444 0555</li>
+            <li>virtualPC@gmail.com</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
     <!-- texto legal -->
-    <p class="mt-12 border-t border-[#878787]/40 pt-6 text-xs leading-relaxed text-[#878787]">
-    Las fotos son ilustrativas. Los precios y las cuotas publicadas son validos
-    unicamente para la compra online y estan sujetos a verificacion de stock.
-    Las especificaciones tecnicas pueden modificarse sin previo aviso.
-    Nexo S.A. &mdash; Constitucion 1250, Rio Cuarto, Cordoba, Argentina. CUIT 30-12345678-9.
+    <p class="mt-6 border-t border-[#878787]/40 pt-4 text-xs leading-relaxed text-[#878787]">
+      Las fotos son ilustrativas. Los precios y las cuotas publicadas son validos
+      unicamente para la compra online y estan sujetos a verificacion de stock.
+      Las especificaciones tecnicas pueden modificarse sin previo aviso.
+      Virtual PC S.A. &mdash; Constitucion 1250, Rio Cuarto, Cordoba, Argentina. CUIT 30-12345678-9.
     </p>
     <!--  copyright  -->
-    <div class="mt-6 flex flex-col gap-3 border-t border-[#878787]/40 pt-6 text-xs text-[#BBBFBF] md:flex-row md:items-center md:justify-between">
-    <p>&copy; 2026 Nexo. Todos los derechos reservados.</p>
-    <p>Trabajo practico &mdash; Reto 5 &mdash; Equipo 1</p>
+    <div class="mt-4 flex flex-col gap-3 border-t border-[#878787]/40 pt-4 text-xs text-[#BBBFBF] md:flex-row md:items-center md:justify-between">
+      <p>&copy; 2026 Virtual PC. Todos los derechos reservados.</p>
+      <p>Trabajo practico &mdash; Reto 5 &mdash; Equipo 1</p>
     </div>
 
-</div>
+  </div>
 </footer>
 </body>
 </html>
